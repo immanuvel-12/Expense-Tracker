@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Money Management App Design System */
+
+@layer base {
+  :root {
+    /* Light theme - Core money-themed color palette */
+    --background: 95 60% 98%;              /* Very light money green background */
+    --foreground: 150 80% 12%;             /* Deep forest green text */
+
+    --card: 0 0% 100%;                     /* Pure white cards */
+    --card-foreground: 150 80% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 150 80% 12%;
+
+    /* Primary: Forest green for main actions */
+    --primary: 150 80% 22%;                /* Forest green */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 150 80% 28%;
+
+    /* Secondary: Light money green */
+    --secondary: 90 60% 88%;               /* Light money green */
+    --secondary-foreground: 150 80% 12%;
+
+    /* Success green for positive amounts */
+    --success: 130 70% 38%;
+    --success-foreground: 0 0% 100%;
+    --success-light: 130 70% 94%;
+
+    /* Warning for overspending */
+    --warning: 45 100% 60%;
+    --warning-foreground: 45 100% 20%;
+    --warning-light: 45 100% 96%;
+
+    /* Danger red for negative amounts */
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --destructive-light: 0 75% 96%;
+
+    --muted: 90 30% 92%;
+    --muted-foreground: 150 30% 48%;
+
+    --accent: 90 60% 88%;
+    --accent-foreground: 150 80% 12%;
+
+    --border: 90 30% 88%;
+    --input: 0 0% 100%;
+    --ring: 150 80% 22%;
+
+    --radius: 0.75rem;
+
+    /* Gradients for modern look */
+    --gradient-money: linear-gradient(135deg, hsl(90 60% 88%), hsl(130 60% 78%));
+    --gradient-success: linear-gradient(135deg, hsl(130 70% 48%), hsl(130 70% 38%));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(90 30% 99%));
+    
+    /* Shadows for depth */
+    --shadow-money: 0 10px 30px -10px hsl(150 80% 22% / 0.15);
+    --shadow-card: 0 4px 20px -4px hsl(150 30% 50% / 0.08);
+    --shadow-elevated: 0 8px 40px -8px hsl(150 80% 22% / 0.12);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    /* Dark theme */
+    --background: 200 50% 3%;              /* Very dark blue-gray */
+    --foreground: 0 0% 98%;                /* Almost white text */
+
+    --card: 200 50% 4%;                    /* Dark card background */
+    --card-foreground: 0 0% 98%;
+
+    --popover: 200 50% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Primary: Bright green for dark mode */
+    --primary: 130 70% 45%;
+    --primary-foreground: 200 50% 3%;
+    --primary-hover: 130 70% 50%;
+
+    /* Secondary: Dark gray-green */
+    --secondary: 200 50% 10%;
+    --secondary-foreground: 0 0% 98%;
+
+    /* Success green for positive amounts */
+    --success: 130 70% 50%;
+    --success-foreground: 200 50% 3%;
+    --success-light: 130 70% 15%;
+
+    /* Warning for overspending */
+    --warning: 45 100% 65%;
+    --warning-foreground: 200 50% 3%;
+    --warning-light: 45 100% 15%;
+
+    /* Danger red for negative amounts */
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 200 50% 3%;
+    --destructive-light: 0 75% 15%;
+
+    --muted: 200 50% 10%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 200 50% 10%;
+    --accent-foreground: 0 0% 98%;
+
+    --border: 200 50% 12%;
+    --input: 200 50% 8%;
+    --ring: 130 70% 45%;
+
+    /* Dark mode gradients */
+    --gradient-money: linear-gradient(135deg, hsl(200 50% 8%), hsl(130 50% 15%));
+    --gradient-success: linear-gradient(135deg, hsl(130 70% 25%), hsl(130 70% 15%));
+    --gradient-card: linear-gradient(145deg, hsl(200 50% 4%), hsl(200 50% 6%));
+    
+    /* Dark mode shadows */
+    --shadow-money: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
+    --shadow-card: 0 4px 20px -4px hsl(0 0% 0% / 0.2);
+    --shadow-elevated: 0 8px 40px -8px hsl(0 0% 0% / 0.25);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
